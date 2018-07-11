@@ -55,7 +55,7 @@ client.getLeafletLayer().addTo(map);
 veldfire.on('metadataChanged', function (event) {
   event.styles.forEach(function (styleMetadata) {
     switch (styleMetadata.getProperty()) {
-      case 'marker-fill':
+      case 'polygon-fill':
         renderLegendRisk(styleMetadata);
         break;
     }
@@ -66,18 +66,18 @@ function renderLegendRisk(metadata) {
   const categories = metadata.getCategories();
 
   for (category of categories) {
-    switch (category.overall) {
-      case 0:
-        document.getElementById('Extreme').innerHTML = '<div class="circle" style="background:${category.value}"></div> Extreme';
+    switch (category.name) {
+      case 'Extreme':
+        document.getElementById('Extreme').innerHTML = `<div class="circle" style="background:${category.value}"></div> Extreme`;
         break;
-      case 1:
-        document.getElementById('High').innerHTML = '<div class="circle" style="background:${category.value}"></div> High';
+      case 'High':
+        document.getElementById('High').innerHTML = `<div class="circle" style="background:${category.value}"></div> High`;
         break;
-      case 3:
-        document.getElementById('Medium').innerHTML = '<div class="circle" style="background:${category.value}"></div> Medium';
+      case 'Medium':
+        document.getElementById('Medium').innerHTML = `<div class="circle" style="background:${category.value}"></div> Medium`;
         break;
-      case 4:
-        document.getElementById('Low').innerHTML = '<div class="circle" style="background:${category.value}"></div> Low';
+      case 'Low':
+        document.getElementById('Low').innerHTML = `<div class="circle" style="background:${category.value}"></div> Low`;
         break;
     }
   }

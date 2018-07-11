@@ -24,3 +24,10 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+.legend .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
