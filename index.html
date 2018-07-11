@@ -1,0 +1,53 @@
+<head>
+  <title>Veldfire Risk</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta charset="utf-8">
+  <!-- Include Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
+  <!-- Include CARTO.js -->
+  <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.8/carto.min.js"></script>
+  <link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <div id="map"></div>
+    <aside class="toolbox">
+      <div class="box">
+        <header>
+          <h1>Veldfire Risk 2010</h1>
+        </header>
+        <section>
+          <!--<p class="description open-sans">Edit manually the SQL query and the CartoCSS style.</p>-->
+          <div class="separator"></div>
+          <section class="usage">
+            <header>How to use this map</header>
+            <p class="open-sans">This map shows the overall veldfire risk for the different District Municipalities in South Africa. Interact
+              with the map by panning and zooming, as well as clicking on a District for more info.</p>
+          </section>
+        </section>
+        <footer class="js-footer">
+          <a href="http://www.letsrespondtoolkit.org/" target="_blank">
+            <img src="http://www.letsrespondtoolkit.org/_/rsrc/1469718562033/config/customLogo.gif?revision=18" alt="letsrespondtoolkit"
+              class="img">
+          </a>
+        </footer>
+      </div>
+      <div class="box">
+        <h2 class="h2">Risk level</h2>
+        <ul class="category open-sans">
+          <li id="Extreme"></li>
+          <li id="High"></li>
+          <li id="medium"></li>
+          <li id="low"></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <script src="main.js"></script>
+</body>
